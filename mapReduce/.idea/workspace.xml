@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dc97331-55e7-4d39-a1c8-bac06a0ab967" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3dc97331-55e7-4d39-a1c8-bac06a0ab967" name="Default Changelist" comment="git commit">
+      <change afterPath="$PROJECT_DIR$/letterCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mapReduce.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount$mapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount$reducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount1$LetterCountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount1$LetterCountReducer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -105,8 +113,16 @@
       <option name="presentableId" value="Default" />
       <updated>1677094536232</updated>
       <workItem from="1677094538311" duration="12000000" />
-      <workItem from="1678240612618" duration="2198000" />
+      <workItem from="1678240612618" duration="4658000" />
     </task>
+    <task id="LOCAL-00001" summary="git commit">
+      <created>1678312535001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678312535002</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,46 +132,8 @@
     <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
     <option featureType="dependencySupport" implementationName="java:org.apache.hadoop:hadoop-common" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="-519" y="-878" key="#Project_Structure" timestamp="1677094583741">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="-519" y="-878" key="#Project_Structure/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677094583741" />
-    <state x="-655" y="-881" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1677107816740">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="-655" y="-881" key="#com.intellij.execution.impl.EditConfigurationsDialog/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677107816740" />
-    <state x="-364" y="-771" key="EnvironmentVariablesDialog" timestamp="1677117037347">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="-364" y="-771" key="EnvironmentVariablesDialog/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677117037347" />
-    <state width="1878" height="297" key="GridCell.Tab.0.bottom" timestamp="1677117623127">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="297" key="GridCell.Tab.0.bottom/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677117623127" />
-    <state width="1878" height="297" key="GridCell.Tab.0.center" timestamp="1677117623126">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="297" key="GridCell.Tab.0.center/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677117623126" />
-    <state width="1878" height="297" key="GridCell.Tab.0.left" timestamp="1677117623125">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="297" key="GridCell.Tab.0.left/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677117623125" />
-    <state width="1878" height="297" key="GridCell.Tab.0.right" timestamp="1677117623126">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="297" key="GridCell.Tab.0.right/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677117623126" />
-    <state x="-581" y="-881" key="Maven.ArtifactSearchDialog" timestamp="1677095640117">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="-581" y="-881" key="Maven.ArtifactSearchDialog/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677095640117" />
-    <state x="-610" y="-904" key="SettingsEditor" timestamp="1677117129439">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="-610" y="-904" key="SettingsEditor/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677117129439" />
-    <state x="-456" y="-783" width="674" height="486" key="find.popup" timestamp="1677100309505">
-      <screen x="-1079" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="-456" y="-783" width="674" height="486" key="find.popup/841.-1055.1920.1055/-1079.-1080.1920.1080/0.25.1792.1095@-1079.-1080.1920.1080" timestamp="1677100309505" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit" />
   </component>
 </project>
