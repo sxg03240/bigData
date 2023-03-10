@@ -32,6 +32,27 @@ public class LetterCount {
         }
     }
 
+//    public static class LetterReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
+//        private IntWritable result = new IntWritable();
+//        private int totalCount = 0;
+//
+//        public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+//            int sum = 0;
+//            for (IntWritable val : values) {
+//                sum += val.get();
+//            }
+//            String output = String.format("(%s, %d)", key.toString(), sum);
+//            result.set(sum);
+//            context.write(new Text(output), result);
+//            totalCount += sum;
+//        }
+//
+//        @Override
+//        protected void cleanup(Context context) throws IOException, InterruptedException {
+//            context.write(new Text("total"), new IntWritable(totalCount));
+//        }
+//    }
+
     public static class LetterReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
         private IntWritable result = new IntWritable();
         private int totalCount = 0;
@@ -41,15 +62,17 @@ public class LetterCount {
             for (IntWritable val : values) {
                 sum += val.get();
             }
-            String output = String.format("(%s, %d)", key.toString(), sum);
             result.set(sum);
-            context.write(new Text(output), result);
+            if (!key.toString().equals("total")) {
+                String output = String.format("(%s,%d)", key.toString(), sum);
+                context.write(new Text(output), result);
+            }
             totalCount += sum;
         }
 
         @Override
         protected void cleanup(Context context) throws IOException, InterruptedException {
-            context.write(new Text("total"), new IntWritable(totalCount));
+            context.write(new Text("(total," + totalCount + ")"), new IntWritable(totalCount));
         }
     }
 
