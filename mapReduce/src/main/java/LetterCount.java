@@ -15,7 +15,6 @@ public class LetterCount {
     public static class LetterMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
         private final static IntWritable one = new IntWritable(1);
         private Text letter = new Text();
-        private int totalCount = 0;
 
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             String line = value.toString().toLowerCase();
@@ -27,20 +26,15 @@ public class LetterCount {
                     if (Character.isLetter(ch)) {
                         letter.set(String.valueOf(ch));
                         context.write(letter, one);
-                        totalCount += 1;
                     }
                 }
             }
-        }
-
-        @Override
-        protected void cleanup(Context context) throws IOException, InterruptedException {
-            context.write(new Text("Total"), new IntWritable(totalCount));
         }
     }
 
     public static class LetterReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
         private IntWritable result = new IntWritable();
+        private int totalCount = 0;
 
         public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
             int sum = 0;
@@ -49,6 +43,7 @@ public class LetterCount {
             }
             result.set(sum);
             context.write(key, result);
+            totalCount += sum;
         }
     }
 
@@ -64,6 +59,13 @@ public class LetterCount {
         job.setOutputValueClass(IntWritable.class);
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        System.exit(job.waitForCompletion(true) ? 0 : 1);
+        boolean success = job.waitForCompletion(true);
+        if (success) {
+            long totalCount = job.getCounters().findCounter("org.apache.hadoop.mapred.Task$Counter", "REDUCE_OUTPUT_RECORDS").getValue();
+            System.out.println("Total count: " + totalCount);
+            System.exit(0);
+        } else {
+            System.exit(1);
+        }
     }
 }
