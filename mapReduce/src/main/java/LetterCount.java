@@ -41,9 +41,8 @@ public class LetterCount {
             for (IntWritable val : values) {
                 sum += val.get();
             }
-            String output = String.format("(%s, %d)", key.toString(), sum);
             result.set(sum);
-            context.write(new Text(output), result);
+            context.write(key, result);
             totalCount += sum;
         }
 
