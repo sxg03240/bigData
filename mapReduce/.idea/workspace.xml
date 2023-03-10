@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dc97331-55e7-4d39-a1c8-bac06a0ab967" name="Default Changelist" comment="git commit">
-      <change afterPath="$PROJECT_DIR$/letterCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount$mapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount$reducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount1$LetterCountMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount1$LetterCountReducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LetterCount1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/letterCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LetterCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordCount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,10 +53,18 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aakrithi\Documents\GitHub\bigData\mapReduce\src\main\java" />
+      <recent name="C:\Users\Aakrithi\Documents\GitHub\bigData\mapReduce\src" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -113,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677094536232</updated>
       <workItem from="1677094538311" duration="12000000" />
-      <workItem from="1678240612618" duration="4658000" />
+      <workItem from="1678240612618" duration="6613000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1678312535001</created>
@@ -122,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678312535002</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="git commit">
+      <created>1678323595481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678323595481</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

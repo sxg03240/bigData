@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.*;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class LetterCount {
+public class LetterCountOld {
 
     public static class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
         private final static IntWritable one = new IntWritable(1);
@@ -37,7 +37,7 @@ public class LetterCount {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "lettercount");
-        job.setJarByClass(LetterCount.class);
+        job.setJarByClass(LetterCountOld.class);
         job.setMapperClass(Map.class);
         job.setCombinerClass(Reduce.class);
         job.setReducerClass(Reduce.class);

@@ -10,12 +10,12 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import java.io.IOException;
 import java.util.StringTokenizer;
-public class LetterCount {
+public class WordCount {
 
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
 		Job job = Job.getInstance(conf, "letter count");
-		job.setJarByClass(LetterCount.class);
+		job.setJarByClass(LetterCountOld.class);
 		job.setMapperClass(mapper.class);
 		job.setCombinerClass(reducer.class);
 		job.setReducerClass(reducer.class);
